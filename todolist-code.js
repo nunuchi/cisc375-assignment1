@@ -33,7 +33,10 @@ function saveInput() {
 
 function removeTableRow(x) {
 	var parent = x.parentNode.parentNode;
-	parent.parentNode.removeChild(parent);
+
+	if(confirm("Are you sure that you want to delete this task?")) {
+	parent.parentNode.removeChild(parent);}
+	else {}
 }
 
 function sortTableDate() {

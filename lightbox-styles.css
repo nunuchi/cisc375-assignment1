@@ -48,8 +48,8 @@ body {
 	position: relative;
 	margin: 0 auto;
 	padding: 0;
-	width: 80%;
-	height: auto;
+	width: 60%;
+	height: 60%;
 
 	animation-name: modalopen;
 	animation-duration: 1s;
