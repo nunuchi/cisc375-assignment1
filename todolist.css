@@ -76,3 +76,11 @@ body {
 	right: 10%;
 	top: 40%;
 
+}
+
+.right-tize tr td:hover {
+	background-color: #6e6e6e;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
