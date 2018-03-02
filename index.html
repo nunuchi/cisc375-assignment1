@@ -31,37 +31,17 @@
 		</tr>
 	</table>
 	<div class="float-right">
-		<p> Add a customer category and color here!</p>
+		<p> Add a custom category and color here!</p>
 		<input type="text" id="newCategory">
 		<input type="color" id="selectColor" value="#000000">
 		<button type="button" onclick="saveColor()">Save</button>
 	</div>
-	
 
-	<table id="chore-list">
-		<tr>
-			<th>Task</th>
-			<th>Date Assigned</th>
-			<th>End Date</th>
-			<th>Category</th>
-			<th>Status</th>
-			<th>Delete</th>	
-		</tr>
-	</table>
-	<table>
-		<tr>
-			<th> <button type="button" onclick="sortTableDate()">Sort Begin Date</button> </th>
-			<th> <button type="button" onclick="sortTableEndDate()">Sort End Date</button> </th> 
-			<th> <button type="button" onclick="sortTableCategory()">Sort Category</button> </th>
-			<th> <button type="button" onclick="sortTableDone()">Sort Completion</button> </th>
-		</tr>
-	</table>
-
-	<div class="centerize">
+		<div class="right-tize">
 		<h1 id="month-now">February</h1>
 		<div id="month-backward"><button type="button" onclick="dateBackward()">Back</button></div>
 		<div id="month-forward"><button type="button" onclick="dateForward()">Next</button></div>
-	</div>
+	
 	<table id="calendar">
 		<tr>
         	<th>Sun</th>
@@ -127,6 +107,28 @@
             <td id="week6.7" class="date" onclick="sendDate(this)"></td>
         </tr>
 	</table>
+</div>
+	
+
+	<table id="chore-list">
+		<tr>
+			<th>Task</th>
+			<th>Date Assigned</th>
+			<th>End Date</th>
+			<th>Category</th>
+			<th>Status</th>
+			<th>Delete</th>	
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th> <button type="button" onclick="sortTableDate()">Sort Begin Date</button> </th>
+			<th> <button type="button" onclick="sortTableEndDate()">Sort End Date</button> </th> 
+			<th> <button type="button" onclick="sortTableCategory()">Sort Category</button> </th>
+			<th> <button type="button" onclick="sortTableDone()">Sort Completion</button> </th>
+		</tr>
+	</table>
+
 
 </div>
 	<div class="fixed-footer">
