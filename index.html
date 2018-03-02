@@ -1,9 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+		<title>To Do List</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="todolist.css">
+		<script type="text/javascript" src="todolist-code.js"></script>
 </head>
-<body>
+<body onload="startUp()">
+	<h1 id="header"> CalendarSystem </h1>
+	<a href="image_gallery.html" id="imageGallery">Image Gallery</a>
+	<div id="wrapper">
+	<table>
+		<tr>
+			<th>Chore</th>
+			<th>End Date</th>
+			<th>Category</th>
+		</tr>
+		<tr>
+	<td><input type="text" name="chore" id="chore-item"></td>
+	<td><input type="date" name="date" id="chore-date"></td>
+	<td><select id="chore-category"><
+		<option id="FF1111" name="Farm">Farm</option>
+		<option id="FFFF11" name="Scavage">Scavage</option>
+		<option id="00FF11" name="Craft">Craft</option>
+		<option id="00FFFF" name="Trade">Trade</option>
+		<option id="008080" name="PvP">PvP</option>
+	</select></td>
+	<td> <button type="button" onclick="saveInput()">Enter</button></td>
+		</tr>
+	</table>
+	<div class="float-right">
+		<p> Add a customer category and color here!</p>
+		<input type="text" id="newCategory">
+		<input type="color" id="selectColor" value="#000000">
+		<button type="button" onclick="saveColor()">Save</button>
+	</div>
+	
 
+	<table id="chore-list">
+		<tr>
+			<th>Chore</th>
+			<th>Date Assigned</th>
+			<th>End Date</th>
+			<th>Category</th>
+			<th>Status</th>
+			<th>Delete</th>	
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th> <button type="button" onclick="sortTableDate()">Sort Begin Date</button> </th>
+			<th> <button type="button" onclick="sortTableEndDate()">Sort End Date</button> </th> 
+			<th> <button type="button" onclick="sortTableCategory()">Sort Category</button> </th>
+			<th> <button type="button" onclick="sortTableDone()">Sort Completion</button> </th>
+		</tr>
+	</table>
+
+	<div class="centerize">
+		<h1 id="month-now">February</h1>
+		<div id="month-backward"><button type="button" onclick="dateBackward()">Back</button></div>
+		<div id="month-forward"><button type="button" onclick="dateForward()">Next</button></div>
+	</div>
+	<table id="calendar">
+		<tr>
+        	<th>Sun</th>
+        	<th>Mon</th>
+        	<th>Tue</th>
+        	<th>Wed</th>
+        	<th>Thu</th>
+        	<th>Fri</th>
+        	<th>Sat</th>
+        </tr>
+        <tr>
+            <td id="week1.1" class="date" onclick="sendDate(this)"></td>
+            <td id="week1.2" class="date" onclick="sendDate(this)"></td>
+            <td id="week1.3" class="date" onclick="sendDate(this)"></td>
+            <td id="week1.4" class="date" onclick="sendDate(this)"></td>
+            <td id="week1.5" class="date" onclick="sendDate(this)"></td>
+            <td id="week1.6" class="date" onclick="sendDate(this)"></td>
+            <td id="week1.7" class="date" onclick="sendDate(this)"></td>
+        </tr>
+        <tr>
+            <td id="week2.1" class="date" onclick="sendDate(this)"></td>
+            <td id="week2.2" class="date" onclick="sendDate(this)"></td>
+            <td id="week2.3" class="date" onclick="sendDate(this)"></td>
+            <td id="week2.4" class="date" onclick="sendDate(this)"></td>
+            <td id="week2.5" class="date" onclick="sendDate(this)"></td>
+            <td id="week2.6" class="date" onclick="sendDate(this)"></td>
+            <td id="week2.7" class="date" onclick="sendDate(this)"></td>
+        </tr>
+        <tr>
+            <td id="week3.1" class="date" onclick="sendDate(this)"></td>
+            <td id="week3.2" class="date" onclick="sendDate(this)"></td>
+            <td id="week3.3" class="date" onclick="sendDate(this)"></td>
+            <td id="week3.4" class="date" onclick="sendDate(this)"></td>
+            <td id="week3.5" class="date" onclick="sendDate(this)"></td>
+            <td id="week3.6" class="date" onclick="sendDate(this)"></td>
+            <td id="week3.7" class="date" onclick="sendDate(this)"></td>
+        </tr>
+        <tr>
+            <td id="week4.1" class="date" onclick="sendDate(this)"></td>
+            <td id="week4.2" class="date" onclick="sendDate(this)"></td>
+            <td id="week4.3" class="date" onclick="sendDate(this)"></td>
+            <td id="week4.4" class="date" onclick="sendDate(this)"></td>
+            <td id="week4.5" class="date" onclick="sendDate(this)"></td>
+            <td id="week4.6" class="date" onclick="sendDate(this)"></td>
+            <td id="week4.7" class="date" onclick="sendDate(this)"></td>
+        </tr>
+        <tr>
+            <td id="week5.1" class="date" onclick="sendDate(this)"></td>
+            <td id="week5.2" class="date" onclick="sendDate(this)"></td>
+            <td id="week5.3" class="date" onclick="sendDate(this)"></td>
+            <td id="week5.4" class="date" onclick="sendDate(this)"></td>
+            <td id="week5.5" class="date" onclick="sendDate(this)"></td>
+            <td id="week5.6" class="date" onclick="sendDate(this)"></td>
+            <td id="week5.7" class="date" onclick="sendDate(this)"></td>
+        </tr>
+        <tr>
+            <td id="week6.1" class="date" onclick="sendDate(this)"></td>
+            <td id="week6.2" class="date" onclick="sendDate(this)"></td>
+            <td id="week6.3" class="date" onclick="sendDate(this)"></td>
+            <td id="week6.4" class="date" onclick="sendDate(this)"></td>
+            <td id="week6.5" class="date" onclick="sendDate(this)"></td>
+            <td id="week6.6" class="date" onclick="sendDate(this)"></td>
+            <td id="week6.7" class="date" onclick="sendDate(this)"></td>
+        </tr>
+	</table>
+
+</div>
+	<div class="fixed-footer">
+
+		<p> Contact Information: <a href="mailto:vang0107@stthomas.edu">vang0107@stthomas.edu</a></p>
+
+	</div>
 </body>
 </html>

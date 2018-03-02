@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Image Gallery</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="lightbox-styles.css">
+	<script src="lightbox-script.js"></script>
+</head>
+
+<body onkeydown="escapeKey(event);rarrowKey(event);larrowKey(event);">
+
+	<h1 id="header">Inspirational Image Gallery</h1>
+	<a href="index.html" id="index"> To Do List </a>
+	<div id="wrapper">
+
+	<img class="transitionThumb" src="pictures/pic01.png" onclick="openModal();currentSlide(1);">
+	<img class="transitionThumb" src="pictures/pic02.png" onclick="openModal();currentSlide(2);">
+	<img class="transitionThumb" src="pictures/pic03.png" onclick="openModal();currentSlide(4);">
+	<img class="transitionThumb" src="pictures/pic04.png" onclick="openModal();currentSlide(4);">
+	<img class="transitionThumb" src="pictures/pic05.png" onclick="openModal();currentSlide(5);">
+	<img class="transitionThumb" src="pictures/pic06.png" onclick="openModal();currentSlide(6);">
+	<img class="transitionThumb" src="pictures/pic07.png" onclick="openModal();currentSlide(7);">
+	<img class="transitionThumb" src="pictures/pic08.png" onclick="openModal();currentSlide(8);">
+	<img class="transitionThumb" src="pictures/pic09.png" onclick="openModal();currentSlide(9);">
+	<img class="transitionThumb" src="pictures/pic10.png" onclick="openModal();currentSlide(10);">
+	<img class="transitionThumb" src="pictures/pic11.png" onclick="openModal();currentSlide(11);">
+	<img class="transitionThumb" src="pictures/pic12.png" onclick="openModal();currentSlide(12);">
+	<img class="transitionThumb" src="pictures/pic13.png" onclick="openModal();currentSlide(13);">
+	<img class="transitionThumb" src="pictures/pic14.png" onclick="openModal();currentSlide(14);">
+	<img class="transitionThumb" src="pictures/pic15.png" onclick="openModal();currentSlide(15);">
+	<img class="transitionThumb" src="pictures/pic16.png" onclick="openModal();currentSlide(16);">
+	<img class="transitionThumb" src="pictures/pic17.png" onclick="openModal();currentSlide(17);">
+	<img class="transitionThumb" src="pictures/pic18.png" onclick="openModal();currentSlide(18);">
+	<img class="transitionThumb" src="pictures/pic19.png" onclick="openModal();currentSlide(19);">
+	<img class="transitionThumb" src="pictures/pic20.png" onclick="openModal();currentSlide(20);">
+
+	</div>
+
+
+
+	<div id="theModal" class="modal">
+		<span class="close-button" onclick="closeModal()"> &times; </span>
+		<div class="modal-content">
+			
+			<div class="slideItem">
+			<img src="pictures/pic01_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic02_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic03_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic04_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic05_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic06_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic07_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic08_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic09_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic10_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic11_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic12_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic13_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic14_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic15_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic16_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic17_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic18_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic19_big.jpg" width="100%">
+			</div>
+
+			<div class="slideItem">
+			<img src="pictures/pic20_big.jpg" width="100%">
+			</div>
+
+			<a class="next-button" onclick="slideChange(1)">&#10095;</a>
+			<a class="back-button" onclick="slideChange(-1)">&#10094;</a>
+			<a class="playButton" onclick="playSlideShow()">Play</a>
+
+			
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic01.png" onclick="currentSlide(1);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic02.png" onclick="currentSlide(2);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic03.png" onclick="currentSlide(3);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic04.png" onclick="currentSlide(4);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic05.png" onclick="currentSlide(5);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic06.png" onclick="currentSlide(6);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic07.png" onclick="currentSlide(7);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic08.png" onclick="currentSlide(8);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic09.png" onclick="currentSlide(9);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic10.png" onclick="currentSlide(10);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic11.png" onclick="currentSlide(11);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic12.png" onclick="currentSlide(12);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic13.png" onclick="currentSlide(13);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic14.png" onclick="currentSlide(14);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic15.png" onclick="currentSlide(15);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic16.png" onclick="currentSlide(16);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic17.png" onclick="currentSlide(17);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic18.png" onclick="currentSlide(18);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic19.png" onclick="currentSlide(19);">
+			<img class="thumbnail-lightbox transitionThumb" src="pictures/pic20.png" onclick="currentSlide(20);">
+
+		</div>
+	</div>
+	<div class="fixed-footer">
+
+		<p> Contact Information: <a href="mailto:vang0107@stthomas.edu">vang0107@stthomas.edu</a></p>
+		<p> Image Resource: <a href="http://publicdomainarchive.com/">Public Domain Archive</a></p>
+
+	</div>
+</body>
+
+
+</html>
