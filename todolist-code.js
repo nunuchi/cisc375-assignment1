@@ -316,7 +316,7 @@ function saveColor() {
 function startUp() {
 	var today = new Date();
 	var day = today.getDate();
-	var month = today.getMonth();
+	var month = today.getMonth()+1;
 	var year = today.getFullYear();
 	var i, j, monthSet, daySet, yearSet;
 	var table = document.getElementById("calendar");
